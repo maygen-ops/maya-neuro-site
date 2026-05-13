@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Детский нейропсихолог — Майя</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: #f7f5f1;
+      color: #2f3a37;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1150px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(247,245,241,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #4f6f67;
+      letter-spacing: 0.02em;
+    }
+
+    .menu {
+      display: flex;
+      gap: 28px;
+      font-size: 0.95rem;
+      color: #52615c;
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.6rem, 6vw, 4.7rem);
+      line-height: 1.05;
+      margin-bottom: 24px;
+      color: #2f3a37;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #5d6d67;
+      margin-bottom: 34px;
+      max-width: 650px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 28px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: #7c9d92;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #6d8d83;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border-color: rgba(0,0,0,0.08);
+      background: white;
+      color: #4d5c57;
+    }
+
+    .btn-secondary:hover {
+      background: #f0ece6;
+    }
+
+    .hero-card {
+      background: #d9e6df;
+      border-radius: 34px;
+      padding: 18px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.06);
+    }
+
+    .hero-card img {
+      border-radius: 24px;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      background: #c7d8d1;
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      margin-bottom: 18px;
+      color: #2f3a37;
+    }
+
+    .section-subtitle {
+      color: #66756f;
+      max-width: 720px;
+      margin-bottom: 46px;
+    }
+
+    .problems-grid,
+    .services-grid,
+    .articles-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .problems-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 24px;
+      border: 1px solid rgba(0,0,0,0.05);
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 35px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #31403b;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      color: #61716b;
+      font-size: 0.96rem;
+    }
+
+    .about {
+      background: #eef3ef;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-image {
+      border-radius: 28px;
+      overflow: hidden;
+      background: #c9d8d2;
+      min-height: 520px;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+      color: #596963;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .price {
+      margin-top: 16px;
+      font-weight: 700;
+      color: #58756c;
+    }
+
+    .articles-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .article-card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .article-cover {
+      height: 220px;
+      background: #d3dfd9;
+    }
+
+    .article-content {
+      padding: 28px;
+    }
+
+    .article-content h3 {
+      margin-bottom: 14px;
+      font-size: 1.2rem;
+      color: #31403b;
+    }
+
+    .article-content p {
+      color: #64746f;
+      margin-bottom: 18px;
+    }
+
+    .article-link {
+      color: #6f8f86;
+      font-weight: 700;
+    }
+
+    .contacts {
+      background: #dbe7e1;
+    }
+
+    .contacts-box {
+      background: white;
+      border-radius: 32px;
+      padding: 50px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .contact-item {
+      padding: 20px;
+      border-radius: 18px;
+      background: #f7f5f1;
+    }
+
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      color: #6b7a75;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      .contacts-box {
+        padding: 32px;
+      }
+    }
+    @media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+line-height:1.2;
+}
+
+.hero p{
+font-size:20px;
+}
+
+.articles-grid{
+grid-template-columns:1fr;
+}
+
+.article-card{
+width:100%;
+}
+
+.article-content h3{
+font-size:28px;
+}
+
+.article-content p{
+font-size:18px;
+}
+
+section{
+padding:70px 24px;
+}
+
+}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">Maya Neuro</div>
+
+    <nav class="menu">
+      <a href="#about">Обо мне</a>
+      <a href="#services">Услуги</a>
+      <a href="#articles">Статьи</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+
+    <div>
+      <h1>Детский нейропсихолог</h1>
+
+      <p>
+        Помогаю детям развивать внимание, память, речь,
+        эмоциональную устойчивость и навыки обучения.
+      </p>
+
+      <div class="buttons">
+        <a href="#contacts" class="btn btn-primary">Записаться</a>
+        <a href="#articles" class="btn btn-secondary">Читать статьи</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <img src="images/photo-main.jpg" alt="Фото специалиста">
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <h2 class="section-title">С какими запросами я работаю</h2>
+
+    <p class="section-subtitle">
+      Нейропсихологическая помощь детям дошкольного и школьного возраста.
+    </p>
+
+    <div class="problems-grid">
+
+      <div class="card">
+        <h3>Трудности обучения</h3>
+        <p>Проблемы с чтением, письмом, усвоением школьной программы.</p>
+      </div>
+
+      <div class="card">
+        <h3>Невнимательность</h3>
+        <p>Сложности с концентрацией, удержанием инструкции и самоконтролем.</p>
+      </div>
+
+
+      <div class="card">
+        <h3>Эмоциональные трудности</h3>
+        <p>Тревожность, истощаемость, сложности адаптации и поведения.</p>
+      </div>
+
+      <div class="card">
+        <h3>Подготовка к школе</h3>
+        <p>Развитие когнитивных функций и учебной готовности.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+
+    <div class="about-image">
+      <img src="images/about-photo.jpg" alt="Фото специалиста">
+    </div>
+
+    <div class="about-text">
+      <h2 class="section-title">Обо мне</h2>
+
+      <p>
+        Здесь будет ваш текст о себе: образование, специализация,
+        подход в работе, опыт и профессиональные принципы.
+      </p>
+
+      <p>
+        Можно добавить информацию о повышении квалификации,
+        работе с детьми разного возраста и форматах консультаций.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+
+    <h2 class="section-title">Услуги и цены</h2>
+
+    <p class="section-subtitle">
+      Здесь можно разместить ваши основные форматы работы.
+    </p>
+
+    <div class="services-grid">
+
+      <div class="card">
+        <h3>Нейропсихологическая диагностика</h3>
+        <p>Первичная диагностика особенностей развития ребёнка.</p>
+        <div class="price">60–90 минут</div>
+      </div>
+
+      <div class="card">
+        <h3>Консультация родителей</h3>
+        <p>Разбор трудностей, рекомендации и стратегия помощи ребёнку.</p>
+        <div class="price">Онлайн / офлайн</div>
+      </div>
+
+      <div class="card">
+        <h3>Коррекционные занятия</h3>
+        <p>Индивидуальная работа по развитию когнитивных функций.</p>
+        <div class="price">Индивидуальный план</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="articles">
+  <div class="container">
+
+    <h2 class="section-title">Статьи</h2>
+
+    <p class="section-subtitle">
+      Полезные материалы для родителей о развитии детей,
+      внимании, обучении и эмоциональном состоянии.
+    </p>
+
+    <div class="articles-grid">
+
+      <article class="article-card">
+        <div class="article-cover"></div>
+
+        <div class="article-content">
+          <h3>Почему ребёнку трудно сосредоточиться</h3>
+
+          <p>
+            Как отличить возрастные особенности от проблем внимания.
+          </p>
+
+          <a href="#" class="article-link">Читать статью →</a>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-cover"></div>
+
+        <div class="article-content">
+          <h3>Когда нужен нейропсихолог</h3>
+
+          <p>
+            Основные признаки, на которые стоит обратить внимание.
+          </p>
+
+          <a href="#" class="article-link">Читать статью →</a>
+        </div>
+      </article>
+
+      <article class="article-card">
+        <div class="article-cover"></div>
+
+        <div class="article-content">
+          <h3>СДВГ или усталость?</h3>
+
+          <p>
+            Почему проблемы поведения не всегда означают диагноз.
+          </p>
+
+          <a href="#" class="article-link">Читать статью →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+  
+<div style="margin-top:50px; text-align:center;">
+
+<a 
+href="articles.html"
+style="
+display:inline-block;
+padding:16px 32px;
+border-radius:999px;
+background:#7c9d92;
+color:white;
+font-weight:bold;
+text-decoration:none;
+">
+
+Все статьи →
+
+</a>
+
+</div>
+
+</section>
+
+<section class="contacts" id="contacts">
+  <div class="container">
+
+    <div class="contacts-box">
+
+      <h2 class="section-title">Контакты</h2>
+
+      <p class="section-subtitle">
+        Вы можете связаться со мной любым удобным способом.
+      </p>
+
+      <div class="contact-list">
+
+        <div class="contact-item">
+          Telegram: @maya_manokhina
+        </div>
+
+        <div class="contact-item">
+          WhatsApp/MAX: +7 (918) 434-31-112
+        </div>
+
+        <div class="contact-item">
+          Email: mayaneuropsy@gmail.com
+
+        </div>
+
+        <div class="contact-item">
+          Краснодар - очные диагностики
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © 2026 Детский нейропсихолог
+  </div>
+</footer>
+
+</body>
+</html>
