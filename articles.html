@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Статьи</title>
+
+<style>
+
+body{
+font-family:Arial,sans-serif;
+background:#f7f5f1;
+padding:40px;
+max-width:1400px;
+margin:auto;
+line-height:1.7;
+color:#2f3a37;
+}
+
+h1{
+margin-bottom:40px;
+font-size:48px;
+}
+
+.articles-grid{
+display:grid;
+grid-template-columns:repeat(3, 1fr);
+column-gap:24px;
+row-gap:60px;
+margin-top:40px;
+align-items:stretch;
+grid-auto-rows:1fr;
+}
+
+.article{
+background:white;
+padding:25px;
+padding-bottom:35px;
+border-radius:24px;
+display:flex;
+flex-direction:column;
+
+border:1px solid rgba(0,0,0,0.05);
+
+box-shadow:
+0 10px 30px rgba(0,0,0,0.04);
+
+}
+
+.article img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:18px;
+margin-bottom:20px;
+display:block;
+}
+
+.article h2{
+font-size:22px;
+line-height:1.4;
+margin-bottom:18px;
+color:#2f3a37;
+}
+
+.article p{
+font-size:17px;
+color:#5c6965;
+margin-bottom:25px;
+}
+
+.article a{
+margin-top:auto;
+color:#6f8e86;
+font-weight:bold;
+text-decoration:none;
+font-size:17px;
+}
+
+.article a:hover{
+opacity:0.7;
+}
+
+.top-button{
+margin-bottom:50px;
+}
+
+.top-button a{
+display:inline-block;
+padding:14px 28px;
+background:#7c9d92;
+color:white;
+border-radius:999px;
+font-weight:bold;
+text-decoration:none;
+}
+
+.top-button a:hover{
+opacity:0.9;
+}
+
+@media(max-width:1000px){
+
+.articles-grid{
+grid-template-columns:repeat(2, 1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+body{
+padding:20px;
+}
+
+h1{
+font-size:38px;
+}
+
+.articles-grid{
+grid-template-columns:1fr;
+row-gap:60px;
+}
+
+.article h2{
+font-size:30px;
+}
+
+.article p{
+font-size:19px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="top-button">
+
+<a href="index.html">
+
+← На главную
+
+</a>
+
+</div>
+
+<h1>Статьи</h1>
+
+<div class="articles-grid">
+
+
+
+<div class="article">
+
+<img src="images/articles/memory.jpg">
+
+<h2>
+Почему ребёнку трудно сосредоточиться
+</h2>
+
+<p>
+Как отличить возрастные особенности от проблем внимания.
+</p>
+
+<a href="articles/attention.html">
+
+Читать статью →
+
+</a>
+
+</div>
+
+
+
+<div class="article">
+
+<img src="images/articles/memory.jpg">
+
+<h2>
+Развиваем память вместе с ребенком
+</h2>
+
+<p>
+Простые упражнения и игры для развития памяти.
+</p>
+
+<a href="articles/memory.html">
+
+Читать статью →
+
+</a>
+
+</div>
+
+
+
+<div class="article">
+
+<img src="images/articles/diagnostics.jpg">
+
+<h2>
+Подготовка ребенка к нейропсихологической диагностике
+</h2>
+
+<p>
+Как снизить тревогу и сделать диагностику комфортной.
+</p>
+
+<a href="articles/diagnostics.html">
+
+Читать статью →
+
+</a>
+
+</div>
+
+
+
+<div class="article">
+
+<img src="images/articles/memory.jpg">
+
+<h2>
+Подготовка к школе
+</h2>
+
+<p>
+Какие навыки действительно важны перед школой.
+</p>
+
+<a href="#">
+
+Читать статью →
+
+</a>
+
+</div>
+
+
+
+<div class="article">
+
+<img src="images/articles/memory.jpg">
+
+<h2>
+Почему ребенок быстро устает
+</h2>
+
+<p>
+Когда усталость — это возрастная норма, а когда сигнал.
+</p>
+
+<a href="#">
+
+Читать статью →
+
+</a>
+
+</div>
+
+
+
+<div class="article">
+
+<img src="images/articles/memory.jpg">
+
+<h2>
+Эмоциональное развитие ребенка
+</h2>
+
+<p>
+Как помочь ребенку лучше понимать свои эмоции.
+</p>
+
+<a href="#">
+
+Читать статью →
+
+</a>
+
+</div>
+
+
+
+</div>
+
+</body>
+</html>
