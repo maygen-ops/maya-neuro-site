@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Название статьи</title>
+
+<style>
+
+body{
+margin:0;
+background:#f7f5f1;
+font-family:Arial,sans-serif;
+color:#2f3a37;
+line-height:1.8;
+}
+
+.container{
+width:min(850px,92%);
+margin:auto;
+padding:50px 0 80px;
+}
+
+.navigation{
+margin-bottom:40px;
+font-size:16px;
+}
+
+.navigation a{
+color:#6f8e86;
+text-decoration:none;
+font-weight:bold;
+margin-right:20px;
+}
+
+.navigation a:hover{
+opacity:0.7;
+}
+
+.cover{
+width:100%;
+border-radius:24px;
+margin:30px 0 40px;
+display:block;
+}
+
+h1{
+font-size:42px;
+line-height:1.2;
+margin-bottom:30px;
+}
+
+h2{
+margin-top:50px;
+margin-bottom:20px;
+font-size:28px;
+line-height:1.3;
+}
+
+p{
+margin-bottom:24px;
+font-size:19px;
+color:#46524e;
+}
+
+.quote{
+background:white;
+padding:30px;
+border-radius:24px;
+margin:40px 0;
+font-size:20px;
+line-height:1.7;
+}
+
+ul{
+margin-bottom:30px;
+padding-left:25px;
+}
+
+li{
+margin-bottom:14px;
+font-size:19px;
+color:#46524e;
+}
+
+@media(max-width:700px){
+
+.container{
+padding-top:35px;
+}
+
+h1{
+font-size:34px;
+}
+
+h2{
+font-size:25px;
+}
+
+p,
+li{
+font-size:18px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="navigation">
+
+<a href="../index.html">
+← На главную
+</a>
+
+<a href="../articles.html">
+Все статьи
+</a>
+
+</div>
+
+
+
+<h1>Важность подготовки ребенка к нейропсихологической диагностике</h1>
+<img class="cover" src="../images/articles/diagnostics.jpg" alt="" />
+<p>Очень часто я сталкиваюсь с тем, что дети приходят на нейропсихологическую диагностику тревожными и скованными. Обычно это происходит потому, что им не объяснили заранее, что их ждет.</p>
+<p>Важно понимать, что для ребенка поход к нейропсихологу может быть столь же волнителен, как визит к врачу или в новое место. И здесь ваша роль крайне важна! </p>
+<h2> </h2>
+<div class="quote"><span data-keep-original-tag="false" data-original-attrs="{&quot;style&quot;:&quot;&quot;,&quot;face&quot;:&quot;-apple-system, BlinkMacSystemFont, \&quot;Segoe UI\&quot;, Roboto, Helvetica, Arial, sans-serif&quot;}">Подготовьте вашего ребенка к этому событию, расскажите ему, что это будет весело и интересно. Вот несколько простых шагов, которые помогут снять напряжение и сделать процесс диагностики более комфортным для вашего ребенка.</span></div>
+<ul>
+<li>Объясните, куда он идет. Расскажите, что он пойдет в интересное место, где можно будет поиграть и познакомиться с новыми людьми.</li>
+<li>Опишите, что его ждет. Объясните, что он будет отвечать на вопросы, рассказывать о себе, выполнять интересные задания и играть в разные игры.</li>
+<li>Создайте позитивный настрой. Убедите ребенка, что это будет увлекательно и здорово. Подчеркните, что нейропсихолог поможет ему лучше понять свои способности и сильные стороны.</li>
+<li>Поделитесь личным опытом. Если у вас есть опыт посещения нейропсихолога или психолога, расскажите о нем. Это поможет ребенку почувствовать себя более уверенно.</li>
+<li>Используйте игры. Вы можете даже проиграть с ребенком ситуацию визита к нейропсихологу в домашних условиях, чтобы он знал, чего ожидать.</li>
+</ul>
+<p><span data-keep-original-tag="false" data-original-attrs="{&quot;style&quot;:&quot;&quot;,&quot;face&quot;:&quot;-apple-system, BlinkMacSystemFont, \&quot;Segoe UI\&quot;, Roboto, Helvetica, Arial, sans-serif&quot;}">Нейропсихологическая диагностика – важный этап в понимании индивидуальных особенностей вашего ребенка. Правильная подготовка поможет ему чувствовать себя спокойнее и увереннее, что в свою очередь позволит специалисту провести диагностику более эффективно.</span><br data-original-attrs="{&quot;style&quot;:&quot;&quot;}" /><br data-original-attrs="{&quot;style&quot;:&quot;&quot;}" /><span data-keep-original-tag="false" data-original-attrs="{&quot;style&quot;:&quot;&quot;,&quot;face&quot;:&quot;-apple-system, BlinkMacSystemFont, \&quot;Segoe UI\&quot;, Roboto, Helvetica, Arial, sans-serif&quot;}">Давайте вместе сделаем этот процесс интересным и позитивным для наших детей! </span></p>
+</div>
+</body>
+</html>
